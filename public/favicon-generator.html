@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="32" height="32" style="border: 1px solid #ccc; image-rendering: pixelated; width: 128px; height: 128px;"></canvas>
+    <br><br>
+    <button onclick="downloadFavicon()">Download favicon.ico</button>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Clear canvas
+        ctx.clearRect(0, 0, 32, 32);
+        
+        // Background circle
+        ctx.fillStyle = '#3B82F6';
+        ctx.beginPath();
+        ctx.arc(16, 16, 16, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Task list lines
+        ctx.fillStyle = 'white';
+        ctx.fillRect(8, 9, 16, 2);
+        ctx.fillRect(8, 13, 12, 2);
+        ctx.fillRect(8, 17, 14, 2);
+        
+        // Checkmark circle
+        ctx.beginPath();
+        ctx.arc(10, 10, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Checkmark
+        ctx.strokeStyle = '#3B82F6';
+        ctx.lineWidth = 1.5;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.beginPath();
+        ctx.moveTo(8.5, 10);
+        ctx.lineTo(9.5, 11);
+        ctx.lineTo(11.5, 9);
+        ctx.stroke();
+        
+        // AI indicator
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(22, 22, 3, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.fillStyle = '#3B82F6';
+        ctx.beginPath();
+        ctx.arc(22, 22, 1.5, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // AI connection lines
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(19, 22); ctx.lineTo(20, 22);
+        ctx.moveTo(24, 22); ctx.lineTo(25, 22);
+        ctx.moveTo(22, 19); ctx.lineTo(22, 20);
+        ctx.moveTo(22, 24); ctx.lineTo(22, 25);
+        ctx.stroke();
+        
+        function downloadFavicon() {
+            const link = document.createElement('a');
+            link.download = 'favicon.ico';
+            link.href = canvas.toDataURL('image/x-icon');
+            link.click();
+        }
+    </script>
+</body>
+</html>

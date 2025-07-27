@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon PNG Generator</title>
+</head>
+<body>
+    <h3>Task Manager Favicon Generator</h3>
+    <canvas id="canvas32" width="32" height="32" style="border: 1px solid #ccc; margin: 10px;"></canvas>
+    <canvas id="canvas16" width="16" height="16" style="border: 1px solid #ccc; margin: 10px;"></canvas>
+    <br>
+    <button onclick="download32()">Download 32x32 PNG</button>
+    <button onclick="download16()">Download 16x16 PNG</button>
+    
+    <script>
+        function drawFavicon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            const scale = size / 32;
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Background circle
+            ctx.fillStyle = '#3B82F6';
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Task list lines
+            ctx.fillStyle = 'white';
+            ctx.fillRect(8*scale, 9*scale, 16*scale, 2*scale);
+            ctx.fillRect(8*scale, 13*scale, 12*scale, 2*scale);
+            ctx.fillRect(8*scale, 17*scale, 14*scale, 2*scale);
+            
+            // Checkmark circle
+            ctx.beginPath();
+            ctx.arc(10*scale, 10*scale, 2*scale, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Checkmark
+            ctx.strokeStyle = '#3B82F6';
+            ctx.lineWidth = 1.5*scale;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.beginPath();
+            ctx.moveTo(8.5*scale, 10*scale);
+            ctx.lineTo(9.5*scale, 11*scale);
+            ctx.lineTo(11.5*scale, 9*scale);
+            ctx.stroke();
+            
+            // AI indicator
+            ctx.fillStyle = 'white';
+            ctx.beginPath();
+            ctx.arc(22*scale, 22*scale, 3*scale, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.fillStyle = '#3B82F6';
+            ctx.beginPath();
+            ctx.arc(22*scale, 22*scale, 1.5*scale, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // AI connection lines
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 1*scale;
+            ctx.beginPath();
+            ctx.moveTo(19*scale, 22*scale); ctx.lineTo(20*scale, 22*scale);
+            ctx.moveTo(24*scale, 22*scale); ctx.lineTo(25*scale, 22*scale);
+            ctx.moveTo(22*scale, 19*scale); ctx.lineTo(22*scale, 20*scale);
+            ctx.moveTo(22*scale, 24*scale); ctx.lineTo(22*scale, 25*scale);
+            ctx.stroke();
+        }
+        
+        // Draw both sizes
+        drawFavicon(document.getElementById('canvas32'), 32);
+        drawFavicon(document.getElementById('canvas16'), 16);
+        
+        function download32() {
+            const link = document.createElement('a');
+            link.download = 'favicon-32x32.png';
+            link.href = document.getElementById('canvas32').toDataURL('image/png');
+            link.click();
+        }
+        
+        function download16() {
+            const link = document.createElement('a');
+            link.download = 'favicon-16x16.png';
+            link.href = document.getElementById('canvas16').toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>
