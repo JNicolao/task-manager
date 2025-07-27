@@ -41,7 +41,7 @@ A sophisticated task management application that leverages artificial intelligen
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/JNicolao/task-manager.git
    cd ai-task-manager
    ```
 

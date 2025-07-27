@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to the AI-Powered Task Manager! This document provides guidelines and information for contributors.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 18+ and npm
@@ -14,7 +14,7 @@ Thank you for your interest in contributing to the AI-Powered Task Manager! This
 
 1. **Fork and Clone**
    ```bash
-   git clone https://github.com/your-username/ai-task-manager.git
+   git clone https://github.com/JNicolao/task-manager.git
    cd ai-task-manager
    ```
 
@@ -33,7 +33,7 @@ Thank you for your interest in contributing to the AI-Powered Task Manager! This
    npm run lint
    ```
 
-## 📋 How to Contribute
+## How to Contribute
 
 ### Types of Contributions
 
@@ -73,7 +73,7 @@ We welcome various types of contributions:
    - Link to any related issues
    - Wait for review and address feedback
 
-## 🎯 Coding Standards
+## Coding Standards
 
 ### TypeScript Guidelines
 
@@ -150,7 +150,7 @@ src/
 └── types/
 ```
 
-## 🧪 Testing Guidelines
+## Testing Guidelines
 
 ### Testing Requirements
 
@@ -166,7 +166,7 @@ src/
 - ESLint for code quality
 - TypeScript compiler for type checking
 
-## 📝 Commit Message Format
+## Commit Message Format
 
 Use clear, descriptive commit messages following this format:
 
@@ -206,7 +206,7 @@ Ensure touch targets meet accessibility guidelines.
 Fixes #456
 ```
 
-## 🎨 Design Guidelines
+## Design Guidelines
 
 ### UI/UX Principles
 
@@ -225,7 +225,7 @@ Follow the established design system:
 - **Spacing**: 8px grid system
 - **Components**: Reuse existing components when possible
 
-## 🐛 Bug Reports
+## Bug Reports
 
 ### Before Reporting
 
@@ -260,7 +260,7 @@ What actually happened.
 Add screenshots if applicable.
 ```
 
-## 💡 Feature Requests
+## Feature Requests
 
 ### Feature Request Template
 
@@ -281,7 +281,7 @@ Other solutions you've considered.
 Any other context or screenshots.
 ```
 
-## 📚 Documentation
+## Documentation
 
 ### Documentation Standards
 
@@ -297,7 +297,7 @@ Any other context or screenshots.
 - **User Guides**: How-to guides for users
 - **Developer Guides**: Technical implementation details
 
-## 🔍 Code Review Process
+## Code Review Process
 
 ### Review Criteria
 
@@ -315,14 +315,14 @@ Any other context or screenshots.
 - Focus on the code, not the person
 - Acknowledge good practices and improvements
 
-## 🏆 Recognition
+## Recognition
 
 Contributors will be recognized in:
 - Project README contributors section
 - Release notes for significant contributions
 - GitHub contributor graphs and statistics
 
-## 📞 Getting Help
+## Getting Help
 
 If you need help or have questions:
 
@@ -331,7 +331,7 @@ If you need help or have questions:
 3. **Discussions**: Use GitHub Discussions for questions
 4. **Community**: Join our community channels
 
-## 📄 License
+## License
 
 By contributing to this project, you agree that your contributions will be licensed under the same license as the project (MIT License).
 
